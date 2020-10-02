@@ -16,6 +16,12 @@ repositories:
   - torchConvNd
   - modular-site.js
 
+featured:
+  - name: spins-b
+    author: stanfordnqp
+  - name: go-libp2p
+    author: libp2p
+
 # Includes an icon in the footer for each username you enter
 footer-links:
   github: jolatechno/
