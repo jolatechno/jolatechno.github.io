@@ -17,7 +17,6 @@ layout: default
         {% endif %}
       {% when "post" %}
         {% for post in site.posts %}
-          <h2>{{ post.url }}</h2>
           {% if post.url == feature.url %}
             <article class="post">
 

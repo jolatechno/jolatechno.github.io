@@ -18,7 +18,7 @@ featured:
     name: spins-b
     author: stanfordnqp
   - type: post
-    url: Hello-World
+    url: /Hello-World/
 
 # showcase repositories
 hide_forks: true
