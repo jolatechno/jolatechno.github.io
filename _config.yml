@@ -8,6 +8,7 @@ avatar: https://avatars1.githubusercontent.com/u/43080967?s=460&v=4
 #
 
 # showcase repositories
+hide_forks: true
 repository:
   - cli-utils
   - go-lc3
