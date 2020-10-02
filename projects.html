@@ -6,7 +6,9 @@ layout: default
 
 <div class="posts">
   {% for repository in site.github.public_repositories limit: 99 %}
-    <div class="github-card" data-github="{{ site.name }}/{{ repository.name }}" data-width="400" data-height="157" data-theme="default"></div>
+    {% if site.repositories contains repository.name %}
+      <div class="github-card" data-github="{{ site.name }}/{{ repository.name }}" data-width="400" data-height="157" data-theme="default"></div>
+    {% endif %}
   {% endfor %}
 </div>
 
