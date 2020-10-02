@@ -4,8 +4,14 @@ layout: default
 
 <h1> Jolatechno's featured projects
 
-{% for repository in site.github.public_repositories limit: 99 %}
+<div class="posts">
+  {% for repository in site.github.public_repositories limit: 99 %}
     <div class="col-sm-6 col-md-12 col-lg-6 col-xl-4 mb-3">
-      {% include repo-card.html %}
+      <h2>{{ site.name }}/{{ repository }}</h2>
+      
+      <div class="github-card" data-github="{{ site.name }}/{{ repository }}" data-width="400" data-height="157" data-theme="default"></div>
     </div>
-{% endfor %}
+  {% endfor %}
+</div>
+
+<script src="//cdn.jsdelivr.net/github-cards/latest/widget.js"></script>
