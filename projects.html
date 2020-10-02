@@ -7,9 +7,9 @@ layout: default
 <div class="posts">
   {% for repository in site.github.public_repositories %}
     {% if site.repositories contains repository.name %}
-      <div class="github-card" data-github="{{ site.name }}/{{ repository.name }}" data-width="400" data-height="157" data-theme="default"></div>
+      <div class="github-card" data-user="{{ site.name }}" data-repo="{{ repository.name }}"></div>
     {% endif %}
   {% endfor %}
 </div>
 
-<script src="//cdn.jsdelivr.net/github-cards/latest/widget.js"></script>
+<script src="https://cdn.jsdelivr.net/gh/lepture/github-cards@latest/jsdelivr/widget.js"></script>
