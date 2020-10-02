@@ -17,10 +17,10 @@ layout: default
         {% endif %}
       {% when "post" %}
         {% for post in site.posts %}
-          {%if post.title == feature.title %}
+          {% if post.url == feature.title %}
             <article class="post">
 
-              <h1><a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a></h1>
+              <h2><a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a></h2>
 
               <div class="entry">
                 {{ post.excerpt }}
