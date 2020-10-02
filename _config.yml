@@ -15,7 +15,6 @@ repositories:
   - triathlon-bike
   - torchConvNd
   - modular-site.js
-  - go-timeout
 
 # Includes an icon in the footer for each username you enter
 footer-links:

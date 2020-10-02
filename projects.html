@@ -5,10 +5,8 @@ layout: default
 <h1> Jolatechno's featured projects
 
 <div class="posts">
-  {% for repository in site.github.public_repositories %}
-    {% if site.repositories contains repository.name %}
-      <div class="github-card" data-user="{{ site.name }}" data-repo="{{ repository.name }}"></div>
-    {% endif %}
+  {% for repository in site.repositories %}
+    <div class="github-card" data-user="{{ site.name }}" data-repo="{{ repository }}"></div>
   {% endfor %}
 </div>
 
