@@ -17,13 +17,18 @@ layout: default
         {% endif %}
       {% when "post" %}
         {% for post in site.posts %}
-          {% if post.url == feature.title %}
+          <h2>{{ post.url }}</h2>
+          {% if post.url == feature.url %}
             <article class="post">
 
               <h2><a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a></h2>
 
               <div class="entry">
                 {{ post.excerpt }}
+              </div>
+
+              <div class="date">
+                Written on {{ post.date | date: "%B %e, %Y" }}
               </div>
 
               <a href="{{ site.baseurl }}{{ post.url }}" class="read-more">Read More</a>
