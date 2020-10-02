@@ -24,7 +24,7 @@ layout: default
         <h3> featured or used projects </h3>
 
         <div>
-          {% for repository in site.featured %}
+          {% for repository in site.featured-repo %}
             <div class="github-card" data-user="{{ repository.author }}" data-repo="{{ repository.name }}"></div>
           {% endfor %}
         </div>

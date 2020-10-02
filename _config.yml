@@ -7,6 +7,19 @@ avatar: https://avatars1.githubusercontent.com/u/43080967?s=460&v=4
 # Flags below are optional
 #
 
+# front page feature
+
+featured:
+  - type: user
+    author: jolatechno
+  - type: repo
+    name: go-lc3
+  - type: repo
+    name: spins-b
+    author: stanfordnqp
+  - type: post
+    title: Hello-World
+
 # showcase repositories
 hide_forks: true
 repositories:
@@ -18,7 +31,7 @@ repositories:
   #- name: repo name
   #  author: repo author
 
-featured:
+featured-repo:
   - name: spins-b
     author: stanfordnqp
   - name: go-libp2p

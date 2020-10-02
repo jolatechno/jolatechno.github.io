@@ -5,7 +5,33 @@ layout: default
 <h1> Welcome ! Sorry but the site is still in progress !
 
 <div class="posts">
-  <div class="github-card" data-user="{{ site.name }}"></div>
+  {% for feature in site.featured}
+    {% case feature.type %}
+      {% when "user" %}
+        <div class="github-card" data-user="{{ feature.name }}"></div>
+      {% when "repo" %}
+        {% if feature.author == null %}
+          <div class="github-card" data-user="{{ site.name }}" data-repo="{{ feature.name }}"></div>
+        {% else %}
+          <div class="github-card" data-user="{{ feature.author }}" data-repo="{{ feature.name }}"></div>
+        {% endif %}
+      {% when "post" %}
+        {% for post in site.posts %}
+          {%if post.title == feature.title %}
+            <article class="post">
+
+              <h1><a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a></h1>
+
+              <div class="entry">
+                {{ post.excerpt }}
+              </div>
+
+              <a href="{{ site.baseurl }}{{ post.url }}" class="read-more">Read More</a>
+            </article>
+          {% endif %}
+        {% endfor %}
+    {% endcase %}
+  {% endfor %}
 </div>
 
 <script src="//cdn.jsdelivr.net/github-cards/latest/widget.js"></script>
