@@ -14,7 +14,11 @@ layout: default
 
           <div>
             {% for repository in site.repositories %}
-              <div class="github-card" data-user="{{ site.name }}" data-repo="{{ repository }}"></div>
+              {% if repository.author == null %}
+                <div class="github-card" data-user="{{ site.name }}" data-repo="{{ repository }}"></div>
+              {% else %}
+                <div class="github-card" data-user="{{ repository.author }}" data-repo="{{ repository.name }}"></div>
+              {% endif %}
             {% endfor %}
           </div>
 

@@ -11,10 +11,12 @@ avatar: https://avatars1.githubusercontent.com/u/43080967?s=460&v=4
 hide_forks: true
 repositories:
   - cli-utils
+  - torchConvNd
   - go-lc3
   - triathlon-bike
-  - torchConvNd
   - modular-site.js
+  - name: spins-b
+    author: stanfordnqp
 
 featured:
   - name: spins-b
