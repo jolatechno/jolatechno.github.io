@@ -4,39 +4,34 @@ layout: default
 
 <div style="width: 100%; display: table;">
   <table  style="table-layout: fixed; width: 100%;">
-    <colgroup>
-      <col style="width: 40%" />
-      <col style="width: 40%" />
-    </colgroup>
-      <tr>
-        <td>
-          <h3> personal projects </h3>
+    <tr>
+      <td style="width:48%;">
+        <h3> personal projects </h3>
 
-          <div>
-            {% for repository in site.repositories %}
-              {% if repository.author == null %}
-                <div class="github-card" data-user="{{ site.name }}" data-repo="{{ repository }}"></div>
-              {% else %}
-                <div class="github-card" data-user="{{ repository.author }}" data-repo="{{ repository.name }}"></div>
-              {% endif %}
-            {% endfor %}
-          </div>
-
-        </td>
-        <td>
-
-          <h3> featured or used projects </h3>
-
-          <div>
-            {% for repository in site.featured %}
+        <div>
+          {% for repository in site.repositories %}
+            {% if repository.author == null %}
+              <div class="github-card" data-user="{{ site.name }}" data-repo="{{ repository }}"></div>
+            {% else %}
               <div class="github-card" data-user="{{ repository.author }}" data-repo="{{ repository.name }}"></div>
-            {% endfor %}
-          </div>
+            {% endif %}
+          {% endfor %}
+        </div>
 
-        </td>
-      </tr>
-    </table>
-  </div>
+      </td>
+      <td style="width:48%;">
+
+        <h3> featured or used projects </h3>
+
+        <div>
+          {% for repository in site.featured %}
+            <div class="github-card" data-user="{{ repository.author }}" data-repo="{{ repository.name }}"></div>
+          {% endfor %}
+        </div>
+
+      </td>
+    </tr>
+  </table>
 </div>
 
 

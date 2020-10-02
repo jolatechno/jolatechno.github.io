@@ -15,8 +15,8 @@ repositories:
   - go-lc3
   - triathlon-bike
   - modular-site.js
-  - name: spins-b
-    author: stanfordnqp
+  #- name: repo name
+  #  author: repo author
 
 featured:
   - name: spins-b
