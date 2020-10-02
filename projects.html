@@ -3,28 +3,34 @@ layout: default
 ---
 
 <div style="width: 100%; display: table;">
-  <div style="display: table-row">
-    <div style="width: 600px; display: table-cell;">
-      <h3> personal projects </h3>
+  <table>
+    <colgroup>
+      <col style="width: 33%" />
+      <col style="width: 33%" />
+      <col style="width: 33%" />
+    </colgroup>
+      <tr>
+        <h3> personal projects </h3>
 
-      <div>
-        {% for repository in site.repositories %}
-          <div class="github-card" data-user="{{ site.name }}" data-repo="{{ repository }}"></div>
-        {% endfor %}
-      </div>
+        <div>
+          {% for repository in site.repositories %}
+            <div class="github-card" data-user="{{ site.name }}" data-repo="{{ repository }}"></div>
+          {% endfor %}
+        </div>
 
-    </div>
-    <div style="display: table-cell;">
+      </tr>
+      <tr>
 
-      <h3> featured or used projects </h3>
+        <h3> featured or used projects </h3>
 
-      <div>
-        {% for repository in site.featured %}
-          <div class="github-card" data-user="{{ repository.author }}" data-repo="{{ repository.name }}"></div>
-        {% endfor %}
-      </div>
+        <div>
+          {% for repository in site.featured %}
+            <div class="github-card" data-user="{{ repository.author }}" data-repo="{{ repository.name }}"></div>
+          {% endfor %}
+        </div>
 
-    </div>
+      </tr>
+    </table>
   </div>
 </div>
 
