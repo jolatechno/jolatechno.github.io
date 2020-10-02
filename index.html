@@ -5,10 +5,10 @@ layout: default
 <h1> Welcome ! Sorry but the site is still in progress !
 
 <div class="posts">
-  {% for feature in site.featured}
+  {% for feature in site.featured %}
     {% case feature.type %}
       {% when "user" %}
-        <div class="github-card" data-user="{{ feature.name }}"></div>
+        <div class="github-card" data-user="{{ feature.author }}"></div>
       {% when "repo" %}
         {% if feature.author == null %}
           <div class="github-card" data-user="{{ site.name }}" data-repo="{{ feature.name }}"></div>
