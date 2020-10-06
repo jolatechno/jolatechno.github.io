@@ -9,9 +9,9 @@ layout: default
     {% if feature.repo == null %}
       <div class="github-card" data-user="{{ feature.author }}"></div>
     {% elsif feature.author == null %}
-      <div class="github-card" data-user="{{ site.name }}" data-repo="{{ feature.name }}"></div>
+      <div class="github-card" data-user="{{ site.name }}" data-repo="{{ feature.repo }}"></div>
     {% else %}
-      <div class="github-card" data-user="{{ feature.author }}" data-repo="{{ feature.name }}"></div>
+      <div class="github-card" data-user="{{ feature.author }}" data-repo="{{ feature.repo }}"></div>
     {% endif %}
   {% endfor %}
 
