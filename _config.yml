@@ -11,8 +11,8 @@ avatar: https://avatars1.githubusercontent.com/u/43080967?s=460&v=4
 
 featured:
   - author: jolatechno
-  - name: go-lc3
-  - name: spins-b
+  - repo: go-lc3
+  - repo: spins-b
     author: stanfordnqp
 
 # showcase repositories
