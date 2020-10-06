@@ -5,13 +5,13 @@ title: What future for silicon photonics ?
 
 Constructed on standard foundry (i.e. a process of manufacturing IC).
 
-Already deployed by Intel.
+Already deployed by Intel<sup>3</sup>.
 
 ## A new way of increasing network speed
 
 Can piggy-back on an already-existing infrastructure both inside the data-center and in-between them.
 
-Photonics-enabled DPU.
+Photonics-enabled DPU which could be based on a risc-V photonic-enable CPU<sup>2</sup> or a similar IC with arm-core.
 
 ## Photonic-computing, or the "continuous-flow manufacturing" of information technologies
 
@@ -39,10 +39,10 @@ The same "continuous data-flow" can be implemented with quantum-computer if both
 
 ## Conclusion
 
-Nimble design with optimization-based design of phtonics design.
+Nimble design with optimization-based design of phtonics design<sup>2</sup>.
 
 ### sources
 
- - risc-V photonic cpu [article](https://riscv.org/wp-content/uploads/2016/01/Wed1015-riscv-sunchen-1-6-2016.pdf), [lecture](https://www.youtube.com/watch?v=WJndUQssFBg)
- - optimization of photonics device [spin-b](https://github.com/stanfordnqp/spins-b/)
- - existing photonic switch demo
+ - <sup>1</sup>Single-chip microprocessor that communicates directly using light, Nature, Volume 528, 24-31 December 2015 - [article](https://riscv.org/wp-content/uploads/2016/01/Wed1015-riscv-sunchen-1-6-2016.pdf), [lecture](https://www.youtube.com/watch?v=WJndUQssFBg)
+ - <sup>2</sup>[SpinS](https://github.com/stanfordnqp/spins-b/) - Inverse design software for nanophotonic structures, [Stanford Reference](http://techfinder.stanford.edu/technologies/S18-012_inverse) Docket Number: S18-012
+ - <sup>3</sup>existing photonic switch demo
