@@ -2,7 +2,7 @@
 <html>
   <head>
     <link rel="shortcut icon" type="image/png" href="{{ site.avatar }}">
-    <title>{% if page.title %}{{ page.title }} – {% endif %}{{ site.name }} – {% if site.author and page.title == null %}{{ site.author }} – {% endif %}{{ site.description }}</title>
+    <title>{% if page.title %}{{ page.title }} – {% endif %}{{ site.name }} – {{ site.description }}</title>
 
     {% include meta.html %}
 
