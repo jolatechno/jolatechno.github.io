@@ -4,72 +4,114 @@ title: What future for silicon photonics ?
 ---
 
 <p>
-  Constructed on standard foundry (i.e. a process of manufacturing IC).
+  Silicon-hotonics device (deice that use integrated circuit as optical decice) have come a long way in the past few years,
+  and are now starting to be deployed (by Intel<sup>3</sup> for example).
 </p>
 
 <p>
-  Already deployed by Intel<sup>3</sup>.
+  The strength of silicon-photonics,
+  and what as allowed it to advance this quickly,
+  is that it can be manufactured on a standard foundry (i.e. a proces for integrated-cricuit manufacturing).
 </p>
 
 <h3>A new way of increasing network speed</h3>
 
 <p>
-  Can piggy-back on an already-existing infrastructure both inside the data-center and in-between them.
+  Silicon-photonics device have quickly entered the data-center space beacause they use the same infrastructure (optical fiber) as current data-center.
+  They have been used to overcome a limitation of classical fiber-optics switch,
+  which is that current fiber-optics switch are currently electronic switch with some device to convert light to an electrical signal and back.
+  This causes an increased latency, and limit the bandwidth of optical fibers.
 </p>
 
 <p>
-  Photonics-enabled DPU which could be based on a risc-V photonic-enable CPU<sup>2</sup> or a similar IC with arm-core.
+  On of the recent solution to answer the boom in bandwidth between nodes inside a datacenter as been the introduction of smart-NICs and DPUs.
+  DPUs (or Data Processing Units) are high-level network interfaces (often running their own operating system) which allow a higher level and dipper connectivity between nodes.
+  DPUs are usully based on an ARM-based CPU,
+  which makes a photonics-enable DPU more believable as a risc-V photonic-enable CPU<sup>2</sup> as already been produce.
 </p>
 
 <h3>Photonic-computing, or the "continuous-flow manufacturing" of information technologies</h3>
 
 <p>
-  Photonics-enabled switch and photonic computing together create a computing-infrastructure comparable to "continuous-flow manufacturing" in factories, where information does not have to stop inside of a node's memory but can have a continuous flow in-between nodes.
+  Once we can efficiently transfer data through light in-between nodes,
+  being able to compute using light at those nodes can start to make sence as the limiting factor could now be the conversion between light and electrical signal.
+  Photonics-enabled switch and photonic computing together create a computing-infrastructure comparable to "continuous-flow manufacturing" in factories,
+  where information does not have to stop inside of a node's memory but can have a continuous flow in-between nodes.
 </p>
 
 <h4>The photonic CPU</h4>
 
 <h4>Shared memory</h4>
 
+<p>
+  The communication bewteen the CPU and its Random Access Memory (RAM) can also be done through light<sup>4</sup>,
+  it then become feasible to access the RAM of other nodes at comparable speed and latency as your own RAM.
+  This could drasticly improove our capacity to aglomarate multiple nodes as a single computer,
+  since the current limitation in distributed computing is the dramatic difference between the latency and speed of the CPU's connections with its RAM
+  and the latency and speed of the connection in-between nodes.
+</p>
+
 <h3>Single-photon quantum-computing and distributed quantum-computing</h3>
 
 <h4>Advantages over ion-trap and supraconductor-based technologies</h4>
 
 <p>
-  Increase stability of photons over other quantum object.
+  A spin or supraconductor based qubit can change state if you look at it the wrong way,
+  even if it has already been cooled to near-absolut zero.
+  Single-photon qubits have already been shown to be dramaticly more stable,
+  to the point of being able to travel hundreds of kilometers through existing optical fibers network<sup>5</sup>.
 </p>
 
 <h4>Transporting quantum information, and the need for a "continuous photonic-switch"</h4>
 
 <p>
-  Photon-based qubit are probably the only one to have the capacity of being transported, and more so of being transported over existing long-range infrastructure (i.e. fiber-optic cables).
-  So even if a future quantum-computer is not based on photons, any hope of "transporting quantum information has to rely on photon-based qubit, and probably through the help of silicon-photonics.
+  Photon-based qubit are probably the only one to have the capacity of being transported,
+  and more so of being transported over existing long-range infrastructure (i.e. fiber-optic cables).
+  So even if a future quantum-computer is not based on photons,
+  any hope of transporting quantum information has to rely on photon-based qubit,
+  and probably through the help of silicon-photonics.
 </p>
 
 <p>
-  This is why a "continuous photonic-switch", probably based on silicon-photonics, is needed.
+  This is why a "continuous photonic-switch" - probably based on silicon-photonics - is needed,
+  as it allows the transport of a single-photon through a network without ever absorbing it (and so "destroying" its quantum information).
+  A "continuous photonic-switch" would be a switch that allow a "continuous" or "direct" path from input to output,
+  with part of the packet of information never being absorbed and re-emited (to achieve this the first part of the packet would have to be absorbed as in a classical switch,
+  to read the destination and the provenence of the packet, but the part of the packet containing the quantum information would be routed un-read).
+
 </p>
 
 <h4>Distributed quantum-computing</h4>
 
 <p>
-  The same "continuous data-flow" can be implemented with quantum-computer if both the network interface and the quantum-computers are based on photonic technologies.
+  The same "continuous data-flow" can be implemented with quantum-computer,
+  if both the network interface and the quantum-computers are based on photonic technologies.
+  This would allow to route qubits between different quantum computer and to actually "glue together" quantum computers
+  (k n-qubits quantum computers could be put together and actually the exact same capability as a k*n-qubits quantum computers).
 </p>
 
 <h3>The photnic FPGA - a gateway to a photonic future</h3>
 
 <p>
-  A photonic FPGA (Field Programable Gate Array) could enable a wide array of silicon-photonics application, and kickstart this revolution as normal FPGA kickstarted the silicon revolution.
+  A photonic FPGA (Field Programable Gate Array) could enable a wide array of silicon-photonics application,
+  and kickstart this revolution as normal FPGA kickstarted the silicon revolution.
+  A phtonic FPGA could also have far-lower developement cost as a full photonic-CPU,
+  as a FPGAs use a simple, repeting block.
 </p>
 
 <p>
-  Since single photons (i.e. photon-based qubits) have most of the same optical property as "normal light", a well-designed photonic FPGA could also carry quantum information (if used in router for example) and could even be a small step toward a FPQGA (Field Programable Quantum Gate Array).
+  Since single photons (i.e. photon-based qubits) have most of the same optical property as "normal light",
+  a well-designed photonic FPGA could also carry quantum information (if used in router for example),
+  and could even be a small step toward a FPQGA (Field Programable Quantum Gate Array).
 </p>
 
-<h3>Conclusion</h3>
+<h3>Optimization based design</h3>
 
 <p>
-  Nimble design with optimization-based design of phtonics design<sup>2</sup>.
+  Optimization-based design of phtonics device<sup>2</sup> has been shown to be possible and open-source tools have already been developed.
+  This allows for a nimbble and cheap design of silicon-photonics devices,
+  and could make photonics-FPGA valible in a short time,
+  potentialy kickstarting the "photonic revolution".
 </p>
 
 <h4>sources</h4>
@@ -79,5 +121,9 @@ title: What future for silicon photonics ?
 
   <li><sup>2</sup><a href="https://github.com/stanfordnqp/spins-b/">SpinS</a> - Inverse design software for nanophotonic structures, <a href="http://techfinder.stanford.edu/technologies/S18-012_inverse">Stanford Reference</a> Docket Number: S18-012</li>
 
-  <li><sup>3</sup>existing photonic switch demo</li>
+  <li><sup>3</sup>existing photonic switch demo (ToDo)</li>
+
+  <li><sup>4</sup>photonic memory (ToDo)</li>
+
+  <li><sup>5</sup>single photon through fiber optics network (ToDo)</li>
 </ul>
