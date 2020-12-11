@@ -12,6 +12,7 @@ avatar: https://avatars1.githubusercontent.com/u/43080967?s=460&v=4
 featured:
   - author: jolatechno
   - repo: go-lc3
+  - repo: binary_arithmetic
   - repo: spins-b
     author: stanfordnqp
 
@@ -21,6 +22,7 @@ repositories:
   - cli-utils
   - torchConvNd
   - go-lc3
+  - binary_arithmetic
   - triathlon-bike
   - modular-site.js
   #- name: repo name
